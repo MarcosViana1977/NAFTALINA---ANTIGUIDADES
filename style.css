@@ -1,4 +1,4 @@
-/* CONFIGURAÇÕES GERAIS */
+/* RESET DE ESTILOS E CONFIGURAÇÕES DE BASE */
 * {
     margin: 0;
     padding: 0;
@@ -8,14 +8,14 @@
 }
 
 body {
-    background-color: #fcf8f2;
-    color: #3e342f;
+    background-color: #fbf7f0;
+    color: #3a302a;
 }
 
-/* CABEÇALHO */
+/* HEADER / BARRA DE NAVEGAÇÃO */
 header {
-    background-color: #2b211b;
-    color: #f7e6d4;
+    background-color: #241c18;
+    color: #f5e4d2;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,35 +23,35 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 header .logo h1 {
-    font-size: 24px;
+    font-size: 26px;
     letter-spacing: 1px;
 }
 
 header .logo span {
-    color: #d4a373;
+    color: #cca071;
     font-weight: 300;
 }
 
 header nav a {
-    color: #f7e6d4;
+    color: #f5e4d2;
     text-decoration: none;
     margin-left: 25px;
     font-weight: 600;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 header nav a:hover {
-    color: #d4a373;
+    color: #cca071;
 }
 
-/* HERO SECTION (BANNER INICIAL) */
+/* SEÇÃO HERO (BANNER DE ENTRADA) */
 .hero {
-    background: linear-gradient(rgba(43, 33, 27, 0.7), rgba(43, 33, 27, 0.8)), url('FB_IMG_1769016328413.jpg') no-repeat center center/cover;
-    height: 60vh;
+    background: linear-gradient(rgba(36, 28, 24, 0.75), rgba(36, 28, 24, 0.85)), url('FB_IMG_1769015166519.jpg') no-repeat center center/cover;
+    height: 55vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,64 +61,66 @@ header nav a:hover {
 }
 
 .hero-content h2 {
-    font-size: 45px;
+    font-size: 42px;
     margin-bottom: 15px;
-    color: #f7e6d4;
+    color: #f5e4d2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero-content p {
-    font-size: 18px;
+    font-size: 19px;
     margin-bottom: 30px;
+    color: #e5d4c3;
 }
 
 .btn {
     display: inline-block;
-    background-color: #d4a373;
-    color: #2b211b;
-    padding: 12px 30px;
+    background-color: #cca071;
+    color: #241c18;
+    padding: 12px 32px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
-    transition: transform 0.3s, background-color 0.3s;
+    border-radius: 4px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #e9c46a;
-    transform: scale(1.05);
+    background-color: #e2b687;
+    transform: scale(1.03);
 }
 
-/* GALERIA / CAROUSEL INTERATIVO */
+/* SEÇÃO DA GALERIA / CARROSSEL */
 .gallery-section {
     padding: 60px 20px;
     text-align: center;
-    background-color: #f4eae1;
+    background-color: #f0e4d8;
 }
 
 .gallery-section h2 {
-    font-size: 32px;
-    color: #2b211b;
-    margin-bottom: 10px;
+    font-size: 34px;
+    color: #241c18;
+    margin-bottom: 12px;
 }
 
 .gallery-section p {
-    margin-bottom: 40px;
-    color: #6e5a4f;
+    margin-bottom: 35px;
+    color: #635347;
 }
 
 .carousel-container {
     position: relative;
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-    background-color: #000;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    background-color: #171210;
 }
 
 .carousel-slide {
     display: flex;
     width: 100%;
-    height: 500px;
+    height: 550px;
     position: relative;
 }
 
@@ -137,152 +139,51 @@ header nav a:hover {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    background-color: #1a1512;
+    background-color: #1c1512;
 }
 
 .caption {
     position: absolute;
     bottom: 0;
-    background: rgba(43, 33, 27, 0.85);
-    color: #f7e6d4;
+    background: rgba(36, 28, 24, 0.9);
+    color: #f5e4d2;
     width: 100%;
-    padding: 15px;
-    font-size: 16px;
-    font-weight: 500;
+    padding: 18px;
+    font-size: 17px;
+    letter-spacing: 0.5px;
 }
 
-/* BOTÕES DO CAROUSEL */
+/* BOTÕES DE NAVEGAÇÃO DA GALERIA */
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(212, 163, 115, 0.8);
-    color: #2b211b;
+    background: rgba(204, 160, 113, 0.85);
+    color: #241c18;
     border: none;
-    font-size: 24px;
-    padding: 12px 18px;
+    font-size: 26px;
+    padding: 14px 20px;
     cursor: pointer;
     border-radius: 50%;
     z-index: 10;
-    transition: background 0.3s;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .carousel-btn:hover {
-    background: #e9c46a;
+    background: #e2b687;
+    transform: translateY(-50%) scale(1.08);
 }
 
-.prev { left: 20px; }
-.next { right: 20px; }
+.prev { left: 25px; }
+.next { right: 25px; }
 
-/* SEÇÃO DE CONTATO E SOBRE */
+/* SEÇÃO SOBRE E INFORMAÇÕES DE CONTATO */
 .contact-section {
-    padding: 70px 8%;
-    background-color: #fcf8f2;
+    padding: 75px 8%;
+    background-color: #fbf7f0;
 }
 
 .contact-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-    flex-wrap: wrap;
-}
+    display
 
-.about-marcos {
-    flex: 1;
-    min-width: 300px;
-}
 
-.about-marcos h2 {
-    font-size: 32px;
-    color: #2b211b;
-    margin-bottom: 20px;
-}
-
-.about-marcos p {
-    font-size: 17px;
-    line-height: 1.6;
-    color: #5c4d44;
-}
-
-.contact-card {
-    flex: 1;
-    min-width: 300px;
-    background-color: #2b211b;
-    color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.contact-card h3 {
-    color: #d4a373;
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.contact-card p {
-    margin-bottom: 25px;
-    color: #dfd5cd;
-}
-
-.phone-number {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 25px;
-    color: #fff;
-}
-
-.phone-number i {
-    color: #d4a373;
-    margin-right: 10px;
-}
-
-.whatsapp-btn {
-    display: inline-block;
-    background-color: #25d366;
-    color: white;
-    padding: 14px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
-}
-
-.whatsapp-btn:hover {
-    background-color: #1ebc54;
-    transform: translateY(-2px);
-}
-
-/* RODAPÉ */
-footer {
-    background-color: #1a130f;
-    color: #8c7a6f;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-}
-
-/* RESPONSIVIDADE (CELULAR) */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    header nav a {
-        margin: 0 10px;
-    }
-    .hero-content h2 {
-        font-size: 32px;
-    }
-    .carousel-slide {
-        height: 350px;
-    }
-    .contact-container {
-        flex-direction: column;
-    }
-}
